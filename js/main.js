@@ -17389,48 +17389,31 @@
 						 ))
 					}(),
 					function() {
-						 var e = document.querySelector(".swiperTrial")
+						 var e = document.querySelector(".related-articles__slider")
 							, t = document.querySelector(".swiperTrialPrev")
 							, i = document.querySelector(".swiperTrialNext");
 						 if (!e)
 							  return !1;
-						 new Tc(".swiperTrial",{
+						 new Tc(".related-articles__slider",{
 							  modules: [Cc],
 							  navigation: {
 									nextEl: i,
 									prevEl: t
 							  },
-							  grabCursor: !0,
+							  
 							  speed: 600,
-							  spaceBetween: 24,
-							  slidesPerView: 1.5,
-							  observer: !0,
-							  resizeObserver: !0,
-							  breakpoints: {
-									316: {
-										 slidesPerView: 1,
-										 centeredSlides: 1,
-										 spaceBetween: 24
-									},
-									480: {
-										 slidesPerView: 1.2,
-										 centeredSlides: 1,
-										 spaceBetween: 24
-									},
-									720: {
-										 slidesPerView: 1.6,
-										 centeredSlides: 1,
-										 spaceBetween: 24
-									},
-									1024: {
-										 slidesPerView: 1.28,
-										 spaceBetween: 24
-									},
-									1440: {
-										 slidesPerView: 1.5,
-										 spaceBetween: 24
-									}
-							  }
+							slidesPerView: 1.2,
+							spaceBetween: 15
+						
+							//   breakpoints: {
+									
+							// 		320: {
+							// 			 slidesPerView: 1.2,
+							// 			 centeredSlides: 1,
+							// 			 spaceBetween: 15
+							// 		},
+									
+							//   }
 						 })
 					}(),
 					u && window.matchMedia("(min-width: 720px)").matches && ((n = $n.timeline()).fromTo(".block-hero__item.first", {
