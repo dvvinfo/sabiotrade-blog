@@ -17099,86 +17099,86 @@
 						 t && (n(),
 						 document.addEventListener("scroll", n))
 					}(),
-					function() {
-						 var e = document.querySelectorAll(".price");
-						 if (!e)
-							  return !1;
-						 e.forEach((function(e) {
-							  e.querySelector(".price__header").addEventListener("click", (function() {
-									e.classList.contains("active") ? e.classList.remove("active") : e.classList.add("active")
-							  }
-							  ))
-						 }
-						 ))
-					}(),
-					function() {
-						 var e = document.querySelectorAll(".popup")
-							, t = new URL(document.location)
-							, i = t.searchParams;
-						 e.forEach((function(e) {
-							  if (!e && !e.dataset.name)
-									return !1;
-							  var r = e.querySelector('[data-close="'.concat(e.dataset.name, '"]'))
-								 , n = e.querySelector('[data-action="'.concat(e.dataset.name, '"]'));
-							  return "popup-coupon" === e.dataset.name && i.get("coupon") && k("GET", "/api/coupon/check?coupon=".concat(i.get("coupon"))).then(function() {
-									var t, r = (t = Zs().mark((function t(r) {
-										 var n, o;
-										 return Zs().wrap((function(t) {
-											  for (; ; )
-													switch (t.prev = t.next) {
-													case 0:
-														 return t.next = 2,
-														 r.json();
-													case 2:
-														 "ok" === (n = t.sent).status && (localStorage.setItem("coupon", i.get("coupon")),
-														 localStorage.setItem("coupon-percent", String(n.percent)),
-														 localStorage.getItem("coupon-active") || (o = (new Date).getTime(),
-														 localStorage.setItem("coupon-active", String(o))),
-														 document.body.style.overflow = "hidden",
-														 e.classList.add("active"));
-													case 4:
-													case "end":
-														 return t.stop()
-													}
-										 }
-										 ), t)
-									}
-									)),
-									function() {
-										 var e = this
-											, i = arguments;
-										 return new Promise((function(r, n) {
-											  var o = t.apply(e, i);
-											  function a(e) {
-													Js(o, r, n, a, s, "next", e)
-											  }
-											  function s(e) {
-													Js(o, r, n, a, s, "throw", e)
-											  }
-											  a(void 0)
-										 }
-										 ))
-									}
-									);
-									return function(e) {
-										 return r.apply(this, arguments)
-									}
-							  }()),
-							  !!r && (r.addEventListener("click", (function() {
-									el(e, i, t)
-							  }
-							  ), !1),
-							  !!n && (n.addEventListener("click", (function() {
-									el(e, i, t)
-							  }
-							  ), !1),
-							  void window.addEventListener("click", (function(r) {
-									return Qs(r, e, i, t)
-							  }
-							  ))))
-						 }
-						 ))
-					}(),
+					// function() {
+					// 	 var e = document.querySelectorAll(".price");
+					// 	 if (!e)
+					// 		  return !1;
+					// 	 e.forEach((function(e) {
+					// 		  e.querySelector(".price__header").addEventListener("click", (function() {
+					// 				e.classList.contains("active") ? e.classList.remove("active") : e.classList.add("active")
+					// 		  }
+					// 		  ))
+					// 	 }
+					// 	 ))
+					// }(),
+					// function() {
+					// 	 var e = document.querySelectorAll(".popup")
+					// 		, t = new URL(document.location)
+					// 		, i = t.searchParams;
+					// 	 e.forEach((function(e) {
+					// 		  if (!e && !e.dataset.name)
+					// 				return !1;
+					// 		  var r = e.querySelector('[data-close="'.concat(e.dataset.name, '"]'))
+					// 			 , n = e.querySelector('[data-action="'.concat(e.dataset.name, '"]'));
+					// 		  return "popup-coupon" === e.dataset.name && i.get("coupon") && k("GET", "/api/coupon/check?coupon=".concat(i.get("coupon"))).then(function() {
+					// 				var t, r = (t = Zs().mark((function t(r) {
+					// 					 var n, o;
+					// 					 return Zs().wrap((function(t) {
+					// 						  for (; ; )
+					// 								switch (t.prev = t.next) {
+					// 								case 0:
+					// 									 return t.next = 2,
+					// 									 r.json();
+					// 								case 2:
+					// 									 "ok" === (n = t.sent).status && (localStorage.setItem("coupon", i.get("coupon")),
+					// 									 localStorage.setItem("coupon-percent", String(n.percent)),
+					// 									 localStorage.getItem("coupon-active") || (o = (new Date).getTime(),
+					// 									 localStorage.setItem("coupon-active", String(o))),
+					// 									 document.body.style.overflow = "hidden",
+					// 									 e.classList.add("active"));
+					// 								case 4:
+					// 								case "end":
+					// 									 return t.stop()
+					// 								}
+					// 					 }
+					// 					 ), t)
+					// 				}
+					// 				)),
+					// 				function() {
+					// 					 var e = this
+					// 						, i = arguments;
+					// 					 return new Promise((function(r, n) {
+					// 						  var o = t.apply(e, i);
+					// 						  function a(e) {
+					// 								Js(o, r, n, a, s, "next", e)
+					// 						  }
+					// 						  function s(e) {
+					// 								Js(o, r, n, a, s, "throw", e)
+					// 						  }
+					// 						  a(void 0)
+					// 					 }
+					// 					 ))
+					// 				}
+					// 				);
+					// 				return function(e) {
+					// 					 return r.apply(this, arguments)
+					// 				}
+					// 		  }()),
+					// 		  !!r && (r.addEventListener("click", (function() {
+					// 				el(e, i, t)
+					// 		  }
+					// 		  ), !1),
+					// 		  !!n && (n.addEventListener("click", (function() {
+					// 				el(e, i, t)
+					// 		  }
+					// 		  ), !1),
+					// 		  void window.addEventListener("click", (function(r) {
+					// 				return Qs(r, e, i, t)
+					// 		  }
+					// 		  ))))
+					// 	 }
+					// 	 ))
+					// }(),
 					function() {
 						 var e, t = document.querySelectorAll(".buttons"), i = document.querySelectorAll(".lang__item"), r = document.querySelectorAll(".block-video__btn"), n = document.querySelectorAll(".block-video__image"), o = document.querySelectorAll(".radio__block"), a = document.querySelectorAll(".tabs__btn"), s = document.querySelectorAll(".accordion__btn"), l = document.querySelectorAll(".footer__links-link"), c = document.getElementById("form-request-email"), u = document.querySelector(".block-steps"), d = document.querySelector(".block-get"), p = document.querySelector("body");
 						 if (t.forEach((function(e) {
@@ -17389,6 +17389,16 @@
 						 ))
 					}(),
 					function() {
+						var postCard = document.querySelector(".slider")
+						if (window.innerWidth <= 783) {
+							postCard.classList.add("related-articles__slider")
+						}
+						else{
+							postCard.classList.remove("related-articles__slider")
+						}
+
+					}(),
+					function() {
 						 var e = document.querySelector(".related-articles__slider")
 							, t = document.querySelector(".swiperTrialPrev")
 							, i = document.querySelector(".swiperTrialNext");
@@ -17404,18 +17414,9 @@
 							  speed: 600,
 							slidesPerView: 1.2,
 							spaceBetween: 15
-						
-							//   breakpoints: {
-									
-							// 		320: {
-							// 			 slidesPerView: 1.2,
-							// 			 centeredSlides: 1,
-							// 			 spaceBetween: 15
-							// 		},
-									
-							//   }
 						 })
 					}(),
+					
 					u && window.matchMedia("(min-width: 720px)").matches && ((n = $n.timeline()).fromTo(".block-hero__item.first", {
 						 scale: 1.6,
 						 y: "100px",
