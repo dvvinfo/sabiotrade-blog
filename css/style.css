@@ -2696,7 +2696,7 @@ body {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   color: var(--text-color-gray);
-  border-bottom: 1px solid #c9cae3;
+  border-bottom: 1px solid var(--text-color-gray);
 }
 
 .links--secondary:hover {
@@ -2704,8 +2704,8 @@ body {
 }
 
 .links--secondary:visited {
-  color: #1c1e4e;
-  border-bottom: 1px solid #4a4c8e;
+  color: var(--text-color-gray);
+  border-bottom: 1px solid var(--text-color-gray);
 }
 
 .links--secondary::-moz-selection {
@@ -3209,12 +3209,11 @@ body {
   }
 }
 .banner__btn {
-  width: 212px;
-  height: 60px;
+  width: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px 61px;
+  padding: 20px 61px;
   border-radius: 16px;
   background: linear-gradient(
     81deg,
@@ -3231,7 +3230,6 @@ body {
 @media (max-width: 580px) {
   .banner__btn {
     width: max-content;
-    height: 28px;
     padding: 10px 27px;
     border-radius: 8px;
     font-size: 8px;
@@ -3434,6 +3432,11 @@ body {
 }
 .big-post-card .post-card__img {
   height: 310px;
+}
+@media (max-width: 580px) {
+  .big-post-card .post-card__img {
+    height: 165px;
+  }
 }
 .big-post-card .post-avatar__img {
   width: 32px;
